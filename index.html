@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div
+      class="screen-size"
+      style="position: absolute; top: 0; right: 0; border: 1px solid red"
+    ></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const screenSize = document.querySelector('.screen-size');
+      window.addEventListener('resize', (e) => {
+        screenSize.innerHTML = document.querySelector('body').scrollWidth;
+      });
+    </script>
+  </body>
+</html>
