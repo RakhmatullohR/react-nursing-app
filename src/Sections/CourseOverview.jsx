@@ -9,7 +9,7 @@ const CourseOverview = () => {
           {/* Left Side (Video or Image) */}
           <div className='flex justify-center items-center'>
             <img
-              src='path/to/your-image.png'
+              src='https://indoc.uz/assets/img/what-is-usmle_2.webp'
               alt='Doctor USMLE Course'
               className='rounded-lg shadow-lg'
             />
