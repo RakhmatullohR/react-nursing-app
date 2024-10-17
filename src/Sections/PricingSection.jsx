@@ -1,41 +1,41 @@
 const pricingPlans = [
-  {
-    title: 'SELF-STUDY TARIFI',
-    price: '490 000',
-    features: [
-      'Erkin grafik',
-      'Video darsliklarga kirish',
-      'Haftada bir, mentor bilan online video-uchrashuv',
-      'Elektron kitoblar, testlar, Case, anki',
-      "Yopiq telegram guruhga a'zo bo'lish",
-    ],
-    buttonText: 'Xarid qilish',
-    detailText: 'Batafsil',
-    popular: false,
-  },
-  {
-    title: 'ONLINE INTENSIVE KURS',
-    price: '600 000',
-    features: [
-      'Online LIVE darslar haftada 6 marta',
-      'Haftada 3 marta Case review',
-      'Haftada 3 marta mentor bilan savol-javob',
-      'InDoc Platformasiga dopusk',
-      'InDoc Qbankda alohida akkaunt',
-      'Mentorlardan online konsultatsiya olish',
-      'Doimiy nazorat va monitoring',
-      "O'tilgan darslarni qayta ko'rish imkoniyati",
-      'Online chat',
-      'Quizlar, case va elektron kitoblar',
-      'Testlar va anki',
-    ],
-    buttonText: 'Xarid qilish',
-    detailText: 'Sinov darsi',
-    popular: true,
-  },
+  // {
+  //   title: 'SELF-STUDY TARIFI',
+  //   price: '490 000',
+  //   features: [
+  //     'Erkin grafik',
+  //     'Video darsliklarga kirish',
+  //     'Haftada bir, mentor bilan online video-uchrashuv',
+  //     'Elektron kitoblar, testlar, Case, anki',
+  //     "Yopiq telegram guruhga a'zo bo'lish",
+  //   ],
+  //   buttonText: 'Xarid qilish',
+  //   detailText: 'Batafsil',
+  //   popular: false,
+  // },
+  // {
+  //   title: 'ONLINE INTENSIVE KURS',
+  //   price: '600 000',
+  //   features: [
+  //     'Online LIVE darslar haftada 6 marta',
+  //     'Haftada 3 marta Case review',
+  //     'Haftada 3 marta mentor bilan savol-javob',
+  //     'InDoc Platformasiga dopusk',
+  //     'InDoc Qbankda alohida akkaunt',
+  //     'Mentorlardan online konsultatsiya olish',
+  //     'Doimiy nazorat va monitoring',
+  //     "O'tilgan darslarni qayta ko'rish imkoniyati",
+  //     'Online chat',
+  //     'Quizlar, case va elektron kitoblar',
+  //     'Testlar va anki',
+  //   ],
+  //   buttonText: 'Xarid qilish',
+  //   detailText: 'Sinov darsi',
+  //   popular: true,
+  // },
   {
     title: 'OFFLINE INTENSIV KURS',
-    price: '890 000',
+    price: '*********',
     features: [
       "Mentorlar bilan haftada 6 marta ko'rishish",
       'Haftada 3 marta Case review',
@@ -68,7 +68,8 @@ const PricingSection = () => {
           }
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        {/* <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> */}
+        <div className='text-center w-fit m-auto'>
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
@@ -101,22 +102,24 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href='#'
-                className={`block text-center py-2 px-4 border rounded-md transition ${
-                  plan.popular
-                    ? 'bg-white text-blue-600 border-white hover:bg-gray-100'
-                    : 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700'
-                }`}
-              >
-                {plan.buttonText}
-              </a>
-              <a
-                href='#'
-                className='block text-center mt-4 text-sm text-gray-600'
-              >
-                {plan.detailText}
-              </a>
+              <div className='w-40 m-auto'>
+                <a
+                  href='#'
+                  className={`block text-center py-2 px-4 border rounded-md transition ${
+                    plan.popular
+                      ? 'bg-white text-blue-600 border-white hover:bg-gray-100'
+                      : 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700'
+                  }`}
+                >
+                  {plan.buttonText}
+                </a>
+                <a
+                  href='#'
+                  className='block text-center mt-4 text-sm text-gray-600'
+                >
+                  {plan.detailText}
+                </a>
+              </div>
             </div>
           ))}
         </div>

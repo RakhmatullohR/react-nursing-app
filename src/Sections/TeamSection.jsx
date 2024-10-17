@@ -2,13 +2,13 @@ const teamMembers = [
   {
     name: 'Asilxon',
     title: 'Chief Executive Officer',
-    img: 'https://your-image-url.com/asilxon.jpg', // Replace with actual image URL
+    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
   },
   {
     name: 'Abbosxon',
     title: 'Academic Director',
     details: ['USMLE Step 1 (235)', 'USMLE Step 2 (soon)', 'OET (soon)'],
-    img: 'https://your-image-url.com/abbosxon.jpg', // Replace with actual image URL
+    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
     socialLinks: [
       { platform: 'telegram', url: 'https://telegram.org' },
       { platform: 'facebook', url: 'https://facebook.com' },
@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Maratxo'ja",
     title: 'Art Director',
-    img: 'https://your-image-url.com/maratxoja.jpg', // Replace with actual image URL
+    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
   },
 ];
 
@@ -38,14 +38,15 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className='bg-white shadow-md rounded-lg overflow-hidden text-center'
+              style={{ backgroundImage: `url(${member.img})` }}
+              className='bg-white shadow-md rounded-lg overflow-hidden text-center h-[400px] flex justify-center items-end'
             >
-              <img
+              {/* <img
                 className='w-full h-64 object-cover'
                 src={member.img}
                 alt={member.name}
-              />
-              <div className='p-4'>
+              /> */}
+              <div className='p-4 h-fit'>
                 <h3 className='text-xl font-semibold'>{member.name}</h3>
                 <p className='text-gray-600'>{member.title}</p>
                 {member.details && (
@@ -65,7 +66,7 @@ const TeamSection = () => {
                         rel='noopener noreferrer'
                       >
                         <img
-                          src={`https://path-to-icon/${link.platform}.svg`}
+                          src={`https://cdn.pixabay.com/photo/2021/05/04/11/13/telegram-6228343_640.png`}
                           alt={link.platform}
                           className='w-6 h-6'
                         />
