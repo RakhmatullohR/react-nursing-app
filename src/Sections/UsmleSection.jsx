@@ -50,9 +50,11 @@ const UsmleCoursesSection = () => {
         <div className='py-36'>
           {' '}
           <h2 className='text-3xl font-bold text-gray-800 mb-2'>
-            {'USMLE STEP 1 TAYYORLOV KURSLARI'}
+            {'NCLEX-PN/RN-NING TAYYORLOV KURSLARI'}
           </h2>
-          <p className='text-lg text-gray-600 mb-6'>{'InDoc bilan'}</p>
+          <p className='text-lg text-gray-600 mb-6'>
+            {'New Future Success Academy bilan'}
+          </p>
           <button className='bg-blue-600 text-white py-2 px-6 rounded-md mb-10 hover:bg-blue-700'>
             Boshlash
           </button>
