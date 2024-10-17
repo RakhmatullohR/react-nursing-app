@@ -1,9 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { infoCards } from './mock';
+
 import AboutUs from './Sections/AboutUs';
 import StatsSection from './Sections/Stats';
 import CourseOverview from './Sections/CourseOverview';
@@ -18,16 +15,7 @@ import UsmleSection from './Sections/UsmleSection';
 import ContactFormSection from './Sections/ContactFormSection';
 import Footer from './Sections/Footer';
 
-const navigation = [
-  { name: 'Asosiy', href: '#' },
-  { name: 'Biz haqimizda', href: '#' },
-  { name: 'Kurs dasturi', href: '#' },
-  { name: 'Modullar', href: '#' },
-  { name: 'Jamoa', href: '#' },
-  { name: 'Narxlar', href: '#' },
-  { name: 'Kontakt', href: '#' },
-  { name: 'Self-study', href: '#' },
-];
+
 
 export default function Example() {
   return (
