@@ -69,27 +69,27 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className='mt-8 border-t pt-4 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm'>
+        {/* Footer Bottom */}
+        <div className='border-t border-gray-200 mt-6 pt-6 text-center text-sm'>
           <p>
-            © Copyright OOO <strong>{'NFSAcademy'}</strong> 2023. Barcha
-            huquqlar himoyalangan.
+            © Copyright OOO <strong>InDoc</strong> 2023. Barcha huquqlar
+            himoyalangan.
           </p>
-          <div className='flex space-x-4 mt-4 md:mt-0'>
-            <a href='#' className='bg-blue-600 p-2 rounded-full text-white'>
-              Telegram
+          <div className='flex justify-center space-x-4 mt-4'>
+            <a href='#' className='text-blue-600 hover:text-blue-500'>
+              <i className='fab fa-telegram'></i>
             </a>
-            <a href='#' className='bg-blue-600 p-2 rounded-full text-white'>
-              Facebook
+            <a href='#' className='text-blue-600 hover:text-blue-500'>
+              <i className='fab fa-facebook'></i>
             </a>
-            <a href='#' className='bg-blue-600 p-2 rounded-full text-white'>
-              Instagram
+            <a href='#' className='text-blue-600 hover:text-blue-500'>
+              <i className='fab fa-instagram'></i>
             </a>
-            <a href='#' className='bg-blue-600 p-2 rounded-full text-white'>
-              Twitter
+            <a href='#' className='text-blue-600 hover:text-blue-500'>
+              <i className='fab fa-twitter'></i>
             </a>
-            <a href='#' className='bg-blue-600 p-2 rounded-full text-white'>
-              YouTube
+            <a href='#' className='text-blue-600 hover:text-blue-500'>
+              <i className='fab fa-youtube'></i>
             </a>
           </div>
         </div>
