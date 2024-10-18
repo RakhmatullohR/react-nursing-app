@@ -2,7 +2,7 @@
 
 const AboutUs = () => {
   return (
-    <div className='bg-gray-50 py-12'>
+    <div id='about' className='bg-gray-50 py-12'>
       <div className='container mx-auto px-4'>
         {/* Title Section */}
         <h2 className='text-center text-3xl font-bold text-blue-800 mb-4'>

@@ -23,7 +23,7 @@ const modules = [
 
 const ModuleSection = () => {
   return (
-    <div className='container mx-auto p-6'>
+    <div id='modules' className='container mx-auto p-6'>
       <h2 className='text-center text-3xl font-bold mb-4'>MODULLAR</h2>
       <p className='text-center text-gray-600 mb-6'>
         {

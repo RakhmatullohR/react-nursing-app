@@ -1,39 +1,48 @@
-import logoUrl from '../assets/images/logo.jpg';
+import logoUrl from '../assets/images/logo3.png';
+import mainBG from '../assets/images/main-bg.webp';
 const Navbar = () => {
   return (
     <nav className='bg-white shadow-md'>
-      <div className='max-w-7xl mx-auto px-4 py-4 flex items-center justify-between'>
+      <div className='max-w-7xl mx-auto px-4 py-0 flex items-center justify-between'>
         <div className='flex items-center'>
-          <img src={logoUrl} alt='InDoc Logo' className='h-10' />
+          <img src={logoUrl} alt='InDoc Logo' className='h-20' />
           <h1 className='ml-2 text-2xl font-bold text-blue-700'>
-            In <span className='text-yellow-500'>Doc</span>
+            <div className='h-6 leading-5'>
+              New <span className='text-yellow-500'>Future</span>
+            </div>
+            <div className='h-6 leading-5'>
+              Success <span className='text-yellow-500'>Academy</span>
+            </div>
           </h1>
         </div>
         <div className='hidden md:flex space-x-6'>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#main' className='text-gray-700 hover:text-blue-600'>
             Asosiy
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#about' className='text-gray-700 hover:text-blue-600'>
             Biz haqimizda
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a
+            href='#course-program'
+            className='text-gray-700 hover:text-blue-600'
+          >
             Kurs dasturi
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#modules' className='text-gray-700 hover:text-blue-600'>
             Modullar
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#team' className='text-gray-700 hover:text-blue-600'>
             Jamoa
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#price' className='text-gray-700 hover:text-blue-600'>
             Narxlar
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          <a href='#contact' className='text-gray-700 hover:text-blue-600'>
             Kontakt
           </a>
-          <a href='#' className='text-gray-700 hover:text-blue-600'>
+          {/* <a href='#' className='text-gray-700 hover:text-blue-600'>
             Self-study
-          </a>
+          </a> */}
         </div>
         <button className='bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700'>
           Boshlash
@@ -45,14 +54,14 @@ const Navbar = () => {
 
 const UsmleCoursesSection = () => {
   return (
-    <section className='bg-blue-50 py-12 px-4 h-full'>
+    <section className=' bg-slate-50/65 py-12 px-4 h-full'>
       <div className='max-w-6xl mx-auto text-center'>
         <div className='py-36'>
           {' '}
-          <h2 className='text-3xl font-bold text-gray-800 mb-2'>
+          <h1 className='text-6xl font-bold text-blue-800 shadow-slate-500 mb-2'>
             {'NCLEX-PN/RN-NING TAYYORLOV KURSLARI'}
-          </h2>
-          <p className='text-lg text-gray-600 mb-6'>
+          </h1>
+          <p className=' text-2xl text-gray-600 mb-6'>
             {'New Future Success Academy bilan'}
           </p>
           <button className='bg-blue-600 text-white py-2 px-6 rounded-md mb-10 hover:bg-blue-700'>
@@ -110,7 +119,7 @@ const UsmleCoursesSection = () => {
 
 const UsmleSection = () => {
   return (
-    <div className='h-screen'>
+    <div style={{ backgroundImage: `url(${mainBG})` }}>
       <Navbar />
       <UsmleCoursesSection />
     </div>

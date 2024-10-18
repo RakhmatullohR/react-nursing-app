@@ -1,6 +1,6 @@
 const ContactFormSection = () => {
   return (
-    <section className='bg-white py-12 px-4'>
+    <section id='contact' className='bg-white py-12 px-4'>
       <div className='max-w-5xl mx-auto'>
         <h2 className='text-3xl font-bold text-center text-gray-800 mb-8'>
           {"RO'YXATDAN O'TING"}

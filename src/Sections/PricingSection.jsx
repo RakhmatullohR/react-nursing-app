@@ -59,7 +59,7 @@ const pricingPlans = [
 
 const PricingSection = () => {
   return (
-    <div className='bg-blue-100 py-12'>
+    <div id='price' className='bg-blue-100 py-12'>
       <div className='container mx-auto px-6'>
         <h2 className='text-center text-3xl font-bold mb-6'>KURS NARXLARI</h2>
         <p className='text-center text-gray-600 mb-12'>
