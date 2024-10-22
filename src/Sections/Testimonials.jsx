@@ -35,6 +35,20 @@ const TestimonialsSection = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets and larger screens
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // For small screens (mobile)
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (

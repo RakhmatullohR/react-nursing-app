@@ -1,85 +1,96 @@
+/* eslint-disable react/prop-types */
+const TeamCard = ({ name, position, imageUrl, socialLinks }) => {
+  return (
+    <div className='w-full sm:w-1/2 lg:w-1/3 p-4'>
+      <div className='bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300'>
+        <div className='relative'>
+          <img
+            className='w-full aspect-square object-cover'
+            src={imageUrl}
+            alt={name}
+          />
+          <div className='absolute inset-0 bg-gray-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-end justify-center space-x-4 transition-all duration-300'>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                className='text-white opacity-0 group-hover:opacity-100 hover:text-blue-400 transition-colors mb-5'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <i className={`fab fa-${link.icon} fa-2x`}></i>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className='p-6 text-center'>
+          <h3 className='text-lg font-bold'>{name}</h3>
+          <p className='text-gray-600'>{position}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const teamMembers = [
   {
     name: 'Asilxon',
-    title: 'Chief Executive Officer',
-    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
+    position: 'Chief Executive Officer',
+    imageUrl: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp',
+    socialLinks: [
+      { icon: 'telegram', url: 'https://t.me/maratxoja' },
+      { icon: 'facebook', url: 'https://facebook.com/maratxoja' },
+      { icon: 'instagram', url: 'https://instagram.com/maratxoja' },
+      { icon: 'linkedin', url: 'https://linkedin.com/in/maratxoja' },
+    ],
   },
   {
     name: 'Abbosxon',
-    title: 'Academic Director',
-    details: ['USMLE Step 1 (235)', 'USMLE Step 2 (soon)', 'OET (soon)'],
-    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
+    position: 'Academic Director',
+    imageUrl: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp',
     socialLinks: [
-      { platform: 'telegram', url: 'https://telegram.org' },
-      { platform: 'facebook', url: 'https://facebook.com' },
-      { platform: 'instagram', url: 'https://instagram.com' },
-      { platform: 'linkedin', url: 'https://linkedin.com' },
+      { icon: 'telegram', url: 'https://t.me/maratxoja' },
+      { icon: 'facebook', url: 'https://facebook.com/maratxoja' },
+      { icon: 'instagram', url: 'https://instagram.com/maratxoja' },
+      { icon: 'linkedin', url: 'https://linkedin.com/in/maratxoja' },
     ],
   },
   {
     name: "Maratxo'ja",
-    title: 'Art Director',
-    img: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp', // Replace with actual image URL
+    position: 'Art Director',
+    imageUrl: 'https://indoc.uz/assets/img/team/Abbaskhan_2.webp',
+    socialLinks: [
+      { icon: 'telegram', url: 'https://t.me/maratxoja' },
+      { icon: 'facebook', url: 'https://facebook.com/maratxoja' },
+      { icon: 'instagram', url: 'https://instagram.com/maratxoja' },
+      { icon: 'linkedin', url: 'https://linkedin.com/in/maratxoja' },
+    ],
   },
 ];
 
 const TeamSection = () => {
   return (
-    <div id='team' className='bg-blue-50 py-12'>
-      <div className='container mx-auto px-6'>
-        <h2 className='text-center text-3xl font-bold mb-4'>JAMOA</h2>
-        <p className='text-center text-gray-600 mb-12'>
+    <section className='py-16 bg-gray-50'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-3xl font-bold text-center mb-8'>JAMOA</h2>
+        <p className='text-center text-gray-500 mb-12'>
           {
-            "Bizning kichik xalqaro jamoamiz o'z ishiga ishtiyoqli odamlardan iborat. Va biz sifatli xizmatlarning muhimligini to'liq tushunamiz."
+            "Bizning kichik xalqaro jamoamiz o'z ishiga ishtiyoqli iborat. Va biz sifatli xizmatlarining muhimligini to'liq tushunamiz."
           }
         </p>
-
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
+        <div className='flex flex-wrap -mx-4'>
           {teamMembers.map((member, index) => (
-            <div
+            <TeamCard
               key={index}
-              style={{ backgroundImage: `url(${member.img})` }}
-              className='bg-white shadow-md rounded-lg overflow-hidden text-center h-[400px] flex justify-center items-end'
-            >
-              {/* <img
-                className='w-full h-64 object-cover'
-                src={member.img}
-                alt={member.name}
-              /> */}
-              <div className='p-4 h-fit'>
-                <h3 className='text-xl font-semibold'>{member.name}</h3>
-                <p className='text-gray-600'>{member.title}</p>
-                {member.details && (
-                  <ul className='mt-2 text-gray-600'>
-                    {member.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
-                {member.socialLinks && (
-                  <div className='flex justify-center mt-4 space-x-4'>
-                    {member.socialLinks.map((link, i) => (
-                      <a
-                        key={i}
-                        href={link.url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        <img
-                          src={`https://cdn.pixabay.com/photo/2021/05/04/11/13/telegram-6228343_640.png`}
-                          alt={link.platform}
-                          className='w-6 h-6'
-                        />
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+              name={member.name}
+              position={member.position}
+              imageUrl={member.imageUrl}
+              socialLinks={member.socialLinks}
+            />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

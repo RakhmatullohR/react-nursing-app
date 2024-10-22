@@ -122,25 +122,25 @@ const UsmleCoursesSection = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white p-6 rounded-lg shadow-md max-w-[300px] mx-auto'>
             <div className='text-blue-500 mb-2 text-3xl'>📚</div>
             <h3 className='text-xl font-semibold text-gray-800 mb-2'>Tajriba</h3>
             <p className='text-gray-600'>{"Ta'lim sohasida 5 yildan ortiq faoliyat"}</p>
           </div>
 
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white p-6 rounded-lg shadow-md max-w-[300px] mx-auto'>
             <div className='text-blue-500 mb-2 text-3xl'>🌐</div>
             <h3 className='text-xl font-semibold text-gray-800 mb-2'>Online Platforma</h3>
             <p className='text-gray-600'>{"Dunyoni istalgan nuqtasidan turib barcha ma'lumot va resurslarga ega bo'lish"}</p>
           </div>
 
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white p-6 rounded-lg shadow-md max-w-[300px] mx-auto'>
             <div className='text-blue-500 mb-2 text-3xl'>🏫</div>
             <h3 className='text-xl font-semibold text-gray-800 mb-2'>Offline darslar</h3>
             <p className='text-gray-600'>{"Har oyda o'tkaziladigan offline nazorat imtihonlari"}</p>
           </div>
 
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white p-6 rounded-lg shadow-md max-w-[300px] mx-auto'>
             <div className='text-blue-500 mb-2 text-3xl'>🔥</div>
             <h3 className='text-xl font-semibold text-gray-800 mb-2'>Intensiv darslar</h3>
             <p className='text-gray-600'>{"Effektiv va maqsadga intiluvchan step-taker'lar atmosferasi"}</p>

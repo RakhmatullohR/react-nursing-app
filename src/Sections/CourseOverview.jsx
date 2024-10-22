@@ -1,22 +1,26 @@
-import mainBG from '../assets/images/main-bg.webp';
+// import mainBG from '../assets/images/main-bg.webp';
 const UsmleSection = () => {
   return (
     <div className='flex flex-col md:flex-row items-center justify-between bg-white p-10 md:p-20'>
       {/* Left Section - Video Thumbnail */}
-      <div className='md:w-1/2 w-full flex justify-center relative mb-8 md:mb-0'>
-        <img
-          src={mainBG} // Replace with your actual image URL
-          alt='USMLE Video'
-          className='w-full md:max-w-lg h-auto'
-        />
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <button className='bg-blue-600 text-white rounded-full p-6 md:p-8 shadow-lg'>
+      <div className='md:w-1/2 w-full aspect-video flex justify-center relative mb-8 md:mb-0'>
+        <iframe
+          className='w-full aspect-video'
+          src='https://www.youtube.com/embed/pjY9ITi1hWo?si=qxOvPL6AjB0oeHU_'
+          title='YouTube video player'
+          // frameborder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          // referrerpolicy='strict-origin-when-cross-origin'
+          allowfullscreen
+        ></iframe>
+        {/* <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+          <button className='bg-blue-600 text-white rounded-full p-2 md:p-3 shadow-lg'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
-              className='w-8 h-8'
+              className='w-16 h-16'
             >
               <path
                 strokeLinecap='round'
@@ -26,7 +30,7 @@ const UsmleSection = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Right Section - Course Details */}
